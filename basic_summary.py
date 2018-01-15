@@ -15,4 +15,4 @@ with open(output_filename, 'wb') as writer:
     tf_example_str = tf_example.SerializeToString()
     str_len = len(tf_example_str)
     writer.write(struct.pack('q', str_len))
-writer.write(struct.pack('%ds' % str_len, tf_example_str))
+    writer.write(struct.pack('%ds' % str_len, tf_example_str))
